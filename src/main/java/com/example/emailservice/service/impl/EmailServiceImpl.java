@@ -26,9 +26,13 @@ public class EmailServiceImpl implements EmailService {
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("olbrachjanek@gmail.com");
-        message.setTo("mlaskowski93@gmail.com");
-        message.setSubject("DupaBlada");
-        message.setText("DUPA3000");
+        message.setTo("krystianbudzisz1@gmail.com");
+        message.setSubject("Currency Conversion Details");
+        message.setText("From Currency: " + emailDetails.getFromCurrency() +
+                "\nTo Currency: " + emailDetails.getToCurrency() +
+                "\nExchange Rate: " + emailDetails.getExchangeRate() +
+                "\nConverted Amount: " + emailDetails.getConvertedAmount());
+
 
         mailSender.send(message);
         log.info("wysyłka zakończona");
