@@ -8,8 +8,10 @@ import lombok.Setter;
 
 @Data
 public class EmailDetails {
-    private String recipient;
-    private String subject;
-    private String body;
-
+    private String email;
+    private String toCurrency;
+    private String fromCurrency;
+    private String currencySymbol;
+    private String exchangeRate;
+    private String convertedAmount;
 }
